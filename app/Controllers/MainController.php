@@ -1,6 +1,9 @@
 <?php
 
 namespace Pokedex\Controllers;
+use Pokedex\Models\Pokemon;
+use Pokedex\Models\PokemonType;
+use Pokedex\Models\Type;
 
 class MainController extends CoreController 
 {
@@ -9,7 +12,14 @@ class MainController extends CoreController
     */
 
     public function home() {
-        $this->show('main/home');
+
+        $pokemons = Pokemon::findAll();
+
+        $data = [
+            'pokemons' => $pokemons,
+        ];
+
+        $this->show('main/home', $data);
     }
 
 }
