@@ -257,7 +257,7 @@ class Pokemon extends CoreModel
         $sql = '
             SELECT *
             FROM `pokemon`
-            WHERE id = ' . $pokemonId;
+            WHERE `number` = ' . $pokemonId;
 
         // query ? exec ?
         // On fait de la LECTURE = une récupration => query()

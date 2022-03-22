@@ -66,16 +66,13 @@ class PokemonType extends CoreModel
         return $this;
     }
 
-    public static function find($id) 
+    public function findAllPokemonByTypeId($typeId) 
     {
          // récupérer un objet PDO = connexion à la BDD
          $pdo = Database::getPDO();
 
          // on écrit la requête SQL pour récupérer le produit
-         $sql = '
-             SELECT *
-             FROM `pokemon_type`
-             WHERE id = ' . $id;
+         $sql = "SELECT * FROM `pokemon_type` WHERE `type_id` = '{$typeId}' ";
  
          // query ? exec ?
          // On fait de la LECTURE = une récupration => query()
@@ -84,7 +81,27 @@ class PokemonType extends CoreModel
  
          // fetchObject() pour récupérer un seul résultat
          // si j'en avais eu plusieurs => fetchAll
-         $result = $pdoStatement->fetchObject('Pokedex\Models\PokemonType');
+         $result = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Pokedex\Models\PokemonType');
+ 
+         return $result;
+    }
+
+    public static function findAllPokemonByNumber($number) 
+    {
+         // récupérer un objet PDO = connexion à la BDD
+         $pdo = Database::getPDO();
+
+         // on écrit la requête SQL pour récupérer le produit
+         $sql = "SELECT * FROM `pokemon_type` WHERE `pokemon_number` = '{$number}' ";
+ 
+         // query ? exec ?
+         // On fait de la LECTURE = une récupration => query()
+         // si on avait fait une modification, suppression, ou un ajout => exec
+         $pdoStatement = $pdo->query($sql);
+ 
+         // fetchObject() pour récupérer un seul résultat
+         // si j'en avais eu plusieurs => fetchAll
+         $result = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Pokedex\Models\PokemonType');
  
          return $result;
     }

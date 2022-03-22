@@ -31,6 +31,39 @@ $router->map (
     'main-home',
 );
 
+// For one pokemon information :
+    $router->map (
+    'GET',
+    '/pokemon/[i:id]',
+    [
+        'method' => 'pokemon',
+        'controller' => '\Pokedex\Controllers\PokemonController'
+    ],
+    'pokemon-detail',
+);
+
+// For select a type :
+    $router->map (
+        'GET',
+        '/type',
+        [
+            'method' => 'typeList',
+            'controller' => '\Pokedex\Controllers\PokemonController'
+        ],
+        'type-list',
+    );
+
+    // Display all Pokémons from a type
+    $router->map (
+        'GET',
+        '/type/[i:id]',
+        [
+            'method' => 'pokemonType',
+            'controller' => '\Pokedex\Controllers\PokemonController'
+        ],
+        'pokemon-type',
+    );
+
 
 //* DISPATCH /
 

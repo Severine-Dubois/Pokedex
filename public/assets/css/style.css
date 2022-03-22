@@ -1,3 +1,33 @@
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../fonts/Pokemon_Classic.ttf') format('embedded-opentype'), /* Internet Explorer */
+    url('../fonts/Pokemon_Classic.ttf') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/Pokemon_Classic.ttf') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/Pokemon_Classic.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Pokemon_Classic.ttf') format('svg'); /* Legacy iOS */
+}
+
 body {
-    background-color: #f0f;
+    font-family: 'Pokemon';
+    background-color: grey;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+.poke-image > img {
+    width: 150px;
+    height: auto;
+}
+
+.bar {
+    background-color: black;
+    height: 10px;
+    width: 255px;
+}
+
+.stat {
+    background-color: aqua;
+    height: 10px;
 }

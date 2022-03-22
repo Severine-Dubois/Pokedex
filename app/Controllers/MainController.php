@@ -17,6 +17,7 @@ class MainController extends CoreController
 
         $data = [
             'pokemons' => $pokemons,
+            'title' => 'Pokédex',
         ];
 
         $this->show('main/home', $data);
