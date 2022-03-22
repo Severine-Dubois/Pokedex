@@ -1,11 +1,12 @@
 
 <h2>Détails de <?= $pokemon->getName(); ?></h2>
 
+<div class="container"> 
 <div class="poke-image">
     <img src="<?= $assetsBaseUri ?>/images/<?= $pokemon->getNumber(); ?>.webp" alt="" srcset="">
-</div>
 
-<div class="description">
+
+
     <p>#<?= $pokemon->getNumber(); ?> <?= $pokemon->getName(); ?></p>
 
     <?php foreach ($types as $type) : ?>
@@ -14,6 +15,9 @@
         echo '<p>' . $type->getName() . '</p>';
     }; ?>
     <?php endforeach; ?>
+    </div>
+    
+    <div class="description">
     <h3>Statistiques</h3>
     <ul>
         <li>PV : <?= $pokemon->getHp(); ?>
@@ -34,13 +38,13 @@
             </div>
         </li>
 
-        <li>Attaque spéciale : <?= $pokemon->getSpeAttack(); ?>
+        <li>Attaque spé : <?= $pokemon->getSpeAttack(); ?>
             <div class="bar">
                 <div class="stat" style="width:<?= $pokemon->getSpeAttack()?>px""></div>
             </div>
         </li>
 
-        <li>Défense spéciale : <?= $pokemon->getSpeDefense(); ?>
+        <li>Défense spé : <?= $pokemon->getSpeDefense(); ?>
             <div class="bar">
                 <div class="stat" style="width:<?= $pokemon->getSpeDefense()?>px""></div>
             </div>
@@ -52,4 +56,5 @@
             </div>
         </li>
     </ul>
+</div>
 </div>

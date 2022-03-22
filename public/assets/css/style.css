@@ -9,16 +9,75 @@
 
 body {
     font-family: 'Pokemon';
-    background-color: grey;
+    background-color: #C3CFA1;
+    margin: 0;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.poke-list {
+    width: 160px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
 }
 
 p {
     font-size: 0.8em;
+    margin: 0;
+}
+
+a > li {
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
+ul > a {
+    padding: 10px;
+    color: blue;
+}
+
+ul {
+    padding: 0;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .poke-image > img {
     width: 150px;
     height: auto;
+}
+
+.poke-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
 }
 
 .bar {
