@@ -1,5 +1,5 @@
 
-<h2> Pokémons de type <?= $typeId->getName() ?> </h2>
+<h2> Pokémons de type <span style="color: #<?= $typeId->getColor(); ?>"> <?= $typeId->getName() ?> </span></h2>
 
 <div class="container">
 
@@ -8,7 +8,7 @@
     <?php foreach ($pokemon_type as $type) { ?>
         
     <?php if ($type->getPokemonNumber() == $pokemon->getNumber()) {
-        echo  '<div class="poke-list">';
+        echo  '<div class="poke-list change-theme">';
         echo '<a href="' . $router->generate('pokemon-detail', ['id' => $pokemon->getNumber() ]) . '">';
         echo '<img src="' . $assetsBaseUri . '/images/' . $pokemon->getNumber() . '.webp" alt="' . $pokemon->getName() . '">';
         echo '</a>';

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="<?= $assetsBaseUri ?>/css/style.css">
     <title><?= $title ?></title>
 </head>
-<body>
-    <header>
+<body class="change-theme">
+    <header class="change-theme">
     <h1>Pokédex</h1>
     <nav>
         <ul>
@@ -17,6 +17,11 @@
             <a href="<?= $router->generate('type-list') ?>"><li>Type</li></a>
         </ul>
     </nav>
+
+    <div>
+    <img class="pika" src="<?= $assetsBaseUri ?>/images/pikachu.gif" alt="pikachu gif">
+    <img class="gengar" src="<?= $assetsBaseUri ?>/images/gengar.gif" alt="gengar gif">
+    </div>
 </header>
 
 <div class="wrapper">
