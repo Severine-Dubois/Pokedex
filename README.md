@@ -3,5 +3,5 @@
 ## Composer/Feature used :
 - Altorouter
 - Var-dumper
-- Autoload (don't forget the dump-autoload !)
+- Autoload
 - Alto-dispatcher
