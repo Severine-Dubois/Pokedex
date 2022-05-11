@@ -14,8 +14,8 @@ const changeTheme = {
           const change = document.getElementsByClassName("change-theme");
           console.log(change);
       
-          for (changeToDark of change) {
-              changeToDark.classList.add("dark-theme");
+          for (const changeToDark of change) {
+              changeToDark.classList.add("dark-theme"); 
           }
       
         });
@@ -29,7 +29,7 @@ const changeTheme = {
               console.log(darkclass);
       
       
-             for (darkclassRemove of darkclass) {
+             for (const darkclassRemove of darkclass) {
               darkclassRemove.classList.remove("dark-theme");
             };
     
@@ -37,5 +37,5 @@ const changeTheme = {
         
         }
         
-    }
+}
 
