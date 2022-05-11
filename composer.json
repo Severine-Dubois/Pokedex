@@ -6,6 +6,6 @@
     },
 
     "autoload": {
-        "psr-4": {"Podedex\\": "app/"}
+        "psr-4": {"Pokedex\\": "app/"}
     }
 }
