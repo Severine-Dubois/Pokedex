@@ -10,7 +10,7 @@
 - Displays all 151 first Pokémons, using a local database (no API)
 - Show one of them with its stats + description
 - Can list them by type
-- Include a dark mode
+- Includes a dark mode
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/97042301/169237695-021c086d-8689-46aa-b534-173a4f1323de.gif)
 
